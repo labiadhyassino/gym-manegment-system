@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Controller/PaiementController.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionSalle/Materiel.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/View/GestionSalle.fxml</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/EVOLUTION/SuiviMembre.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/images/login.png</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionPersonnel/EntraineurPersonnel.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/images/delete.png</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionPersonnel/Administrateur.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Controller/ParametresController.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionSalle/Produit.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/EVOLUTION/gestionPlan.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionSalle/SalleFiliale.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/javafxapplication1/Main.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionPersonnel/Personnel.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/AbonnementPremium.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionSalle/SalleNonDisponibleException.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/AbonnementStandard.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionPersonnel/Entraineur.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/Casier.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/EVOLUTION/PlanNutritionnel.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/GestionPersonnel/Personne.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/EVOLUTION/planEntrainement.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/Membre.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/Paiement.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/EVOLUTION/Exercice.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/DateAbonnement.java</file>
+            <file>file:/D:/2%20éme%20année/projet%20jav/gestion_de_salle_de_sport/JavaFXApplication1/src/Model/gestion_membre/Abonnement.java</file>
+        </group>
+    </open-files>
+</project-private>

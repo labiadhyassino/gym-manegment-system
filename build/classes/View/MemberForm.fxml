@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.FormController" spacing="10" style="-fx-padding: 20;" fx:id="popupVBox">
+    <Label text="Ajouter un Membre" style="-fx-font-size: 16px; -fx-font-weight: bold;" />
+    <GridPane hgap="10" vgap="10">
+        <Label text="Nom :" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+        <TextField fx:id="nomField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+        <Label text="Prénom :" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+        <TextField fx:id="prenomField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+        <Label text="Abonnement :" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+        <TextField fx:id="abonnementField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+        <Label text="Téléphone :" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+        <TextField fx:id="telephoneField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+    </GridPane>
+    <Button fx:id="btnConfirmer" text="Confirmer" onAction="#confirmerAction" style="-fx-font-size: 14px; -fx-background-color: #2ecc71; -fx-text-fill: white;" />
+</VBox>

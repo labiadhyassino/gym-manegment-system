@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.animation.*?>
+<?import javafx.util.*?>
+
+<BorderPane fx:controller="Controller.HomeController" xmlns:fx="http://javafx.com/fxml" prefHeight="600" prefWidth="800">
+    
+    <!-- Titre en haut -->
+    <top>
+        <ToolBar style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Label text="Système de Gestion de Salle de Sport" style="-fx-text-fill: white; -fx-font-size: 20px;"/>
+        </ToolBar>
+    </top>
+
+    <!-- Menu principal sur la gauche -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #ecf0f1; -fx-padding: 15;">
+            <Button fx:id="tableauDeBord" text="Tableau de Bord" prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToTableauDeBord"/>
+            <Button fx:id="gestionDesMembres" text="Gestion des Membres" prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToGestionDesMembres"/>
+            <Button fx:id="gestionDesSalles" text="Gestion Des Salles " prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToGestionDesSalles"/>
+            <Button fx:id="paiements" text="Paiements" prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToPaiements"/>
+            <Button fx:id="rapports" text="Rapports" prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToRapports"/>
+            <Button fx:id="personnels" text="Personnels" prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToPersonnel" />
+            <Button fx:id="parametres" text="Paramètres" prefWidth="150" style="-fx-font-size: 14px;" onAction="#navigateToParametres"/>
+            <Button fx:id="deconnecter" text="Déconnexion" prefWidth="150" style="-fx-font-size: 14px; -fx-text-fill: red;" onAction="#deconnecter"/>
+        </VBox>
+    </left>
+
+    <!-- Zone principale -->
+     <center>
+  <StackPane style="-fx-padding: 15; -fx-background-color: #f4f6f7; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+    <!-- Conteneur avec défilement pour la liste des séances -->
+    <ScrollPane style="-fx-background-color: transparent;" fitToWidth="true">
+        <VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #ffffff; -fx-border-radius: 10px; -fx-background-radius: 10px;">
+            
+            <!-- Titre des prochaines séances -->
+            <Label text="Prochaines Séances" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50; -fx-alignment: center;"/>
+
+            <!-- Séances -->
+            <Label text="🎯 Séance de Yoga à 10h00" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #e74c3c; -fx-alignment: center;"/>
+            <Label text="💃 Cours de Zumba à 14h00" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #3498db; -fx-alignment: center;"/>
+            <Label text="🏋️‍♂️ Séance de Musculation à 18h00" style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #3498db; -fx-alignment: center;"/>
+            
+            <!-- Ligne de séparation -->
+            <Separator style="-fx-background-color: #bdc3c7; -fx-padding: 10 0 10 0;" />
+
+            <!-- Boîtes des Informations Générales -->
+            <HBox spacing="20" style="-fx-padding: 20; -fx-alignment: center;">
+                
+                <!-- Information Générale 1 -->
+                <VBox alignment="CENTER" style="-fx-background-color: #3498db; -fx-padding: 20; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-pref-width: 150px; -fx-height: 100px;">
+                    <Label text="Membres Inscrits" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="200" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="Actuellement" style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+                </VBox>
+
+                <!-- Information Générale 2 -->
+                <VBox alignment="CENTER" style="-fx-background-color: #2ecc71; -fx-padding: 20; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-pref-width: 150px; -fx-height: 100px;">
+                    <Label text="Séances Hebdo" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="50" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="Cette semaine" style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+                </VBox>
+
+                <!-- Information Générale 3 -->
+                <VBox alignment="CENTER" style="-fx-background-color: #e74c3c; -fx-padding: 20; -fx-border-radius: 10px; -fx-background-radius: 10px; -fx-pref-width: 150px; -fx-height: 100px;">
+                    <Label text="Nouveaux Membres" style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="15" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;"/>
+                    <Label text="Cette semaine" style="-fx-font-size: 14px; -fx-text-fill: white;"/>
+                </VBox>
+            </HBox>
+
+        </VBox>
+    </ScrollPane>
+</StackPane>
+
+</center>
+
+
+    <!-- Pied de page -->
+    <bottom>
+        <ToolBar style="-fx-background-color: #bdc3c7;">
+            <Label text="© 2024 Système de Gestion de Salle de Sport. Tous droits réservés." style="-fx-text-fill: #2c3e50;"/>
+        </ToolBar>
+    </bottom>
+</BorderPane>

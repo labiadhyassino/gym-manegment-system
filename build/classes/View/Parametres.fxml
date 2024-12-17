@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ParametresController">
+
+    <!-- Barre de titre -->
+    <top>
+        <ToolBar style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Button fx:id="BackButton" onAction="#BackAction" prefHeight="40" prefWidth="40" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;" text="←" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px;" text="Paramètres" />
+        </ToolBar>
+    </top>
+
+    <!-- Zone principale -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f5f5f5; -fx-border-color: #bdc3c7; -fx-border-width: 2; -fx-border-radius: 5;">
+
+            <!-- Section : Gestion des utilisateurs -->
+            <Label style="-fx-font-size: 18px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" text="Gestion des Utilisateurs" />
+
+            <TableView fx:id="userTable" style="-fx-pref-height: 300px;">
+                <columns>
+                    <TableColumn fx:id="colNom" text="Nom" />
+                    <TableColumn fx:id="colEmail" text="Email" />
+                    <TableColumn fx:id="colStatut" text="Statut" />
+                    <TableColumn fx:id="colDateInscription" text="Date d'inscription" />
+                </columns>
+            </TableView>
+
+            <!-- Boutons pour gérer les utilisateurs -->
+            <HBox spacing="10" style="-fx-alignment: center;">
+                <Button onAction="#addUser" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="Ajouter Utilisateur" />
+                <Button onAction="#editUser" style="-fx-background-color: #f39c12; -fx-text-fill: white;" text="Modifier" />
+                <Button onAction="#deleteUser" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" text="Supprimer" />
+            </HBox>
+
+        </VBox>
+    </center>
+
+    <!-- Menu latéral gauche -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #ecf0f1; -fx-padding: 15;">
+            <Label style="-fx-font-size: 16px; -fx-font-weight: bold;" text="Paramètres Généraux" />
+            <Button onAction="#changePassword" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Modifier Mot de Passe" />
+            <Button onAction="#changeTheme" prefHeight="26.0" prefWidth="137.0"  style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Changer le Thème" />
+            <Button onAction="#changeLanguage" prefHeight="26.0" prefWidth="136.0"  style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Changer la Langue" />
+            <Button onAction="#editHours" prefHeight="26.0" prefWidth="134.0"  style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Horaires d'ouverture" />
+        </VBox>
+    </left>
+
+    <!-- Pied de page -->
+    <bottom>
+        <ToolBar style="-fx-background-color: #bdc3c7;">
+            <Label style="-fx-text-fill: #2c3e50;" text="© 2024 Système de Gestion. Tous droits réservés." />
+        </ToolBar>
+    </bottom>
+
+</BorderPane>

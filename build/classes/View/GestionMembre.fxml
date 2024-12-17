@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:controller="Controller.GestionMembreController" prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1">
+    <top>
+        <ToolBar style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <!-- Bouton de retour -->
+            <Button fx:id="BackButton" onAction="#BackAction"  prefHeight="40.0" prefWidth="40.0" text="←" 
+                    style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;" />
+            <!-- Titre de la page -->
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px;" text="Gestion des Membres" />
+        </ToolBar>
+    </top>
+
+    <!-- Zone principale avec la table et les boutons -->
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            
+            <!-- Table des membres -->
+            <TableView fx:id="tableMembres" prefHeight="400">
+                <columns>
+                    <TableColumn fx:id="idField" prefWidth="50" text="ID" />
+                    <TableColumn fx:id="nomField" prefWidth="150" text="Nom" />
+                    <TableColumn fx:id="prenomField" prefWidth="150" text="Prenom" />
+                    <TableColumn fx:id="abonnementField" prefWidth="150" text="Abonnement" />
+                    <TableColumn fx:id="telephoneField" prefWidth="150" text="Téléphone" />
+                    <TableColumn fx:id="casierField" prefWidth="150" text="Casier" />
+                </columns>
+            </TableView>
+
+            <!-- Boutons pour les actions -->
+            <HBox spacing="10">
+                <Button fx:id="btnAjouter" style="-fx-font-size: 14px;" text="Ajouter" onAction="#afficherPopupAjoutMembre"/>
+                <Button fx:id="btnModifier" style="-fx-font-size: 14px;" text="Modifier" onAction="#afficherPopupModifierMembre" />
+                <Button fx:id="btnSupprimer" style="-fx-font-size: 14px;" text="Supprimer" onAction="#handleSupprimer" />
+                <Button fx:id="btnRechercher" style="-fx-font-size: 14px;" text="Rechercher"  />
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Footer -->
+    <bottom>
+        <ToolBar style="-fx-background-color: #bdc3c7;">
+            <Label style="-fx-text-fill: #2c3e50;" text="© 2024 Système de Gestion de Salle de Sport. Tous droits réservés." />
+        </ToolBar>
+    </bottom>
+</BorderPane>

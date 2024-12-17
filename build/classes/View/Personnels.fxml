@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="Controller.PersonnelsController" prefHeight="600" prefWidth="800">
+
+    <!-- Titre en haut -->
+    <top>
+        <ToolBar style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+              <Button fx:id="BackButton" onAction="#BackAction" prefHeight="40.0" prefWidth="40.0" text="←"
+                    style="-fx-font-size: 17px; -fx-background-color: transparent; -fx-text-fill: white;" />
+            <Label text="Gestion des Personnels" style="-fx-text-fill: white; -fx-font-size: 20px;" />
+        </ToolBar>
+    </top>
+
+    <!-- Zone principale sans menu gauche -->
+    <center>
+        <VBox spacing="20" style="-fx-padding: 20; -fx-background-color: #f4f6f7;">
+
+            <!-- Titre -->
+            <Label text="Liste des Personnels" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2c3e50;" />
+
+            <!-- Barre de recherche -->
+            <HBox spacing="10" style="-fx-alignment: center; -fx-padding: 10;">
+                <Label text="Rechercher :" style="-fx-font-size: 16px; -fx-text-fill: #2c3e50;" />
+                <TextField fx:id="searchField" promptText="Nom ou rôle..." style="-fx-pref-width: 300px;" />
+                <Button text="Rechercher" style="-fx-background-color: #3498db; -fx-text-fill: white;" onAction="#searchPersonnel" />
+            </HBox>
+
+            <!-- Tableau des personnels -->
+            <TableView fx:id="personnelTable" style="-fx-pref-height: 400px; -fx-border-color: #bdc3c7; -fx-background-color: white;">
+                <columns>
+                    <TableColumn text="Nom" fx:id="colNom" style="-fx-font-size: 14px;" />
+                    <TableColumn text="Rôle" fx:id="colRole" style="-fx-font-size: 14px;" />
+                    <TableColumn text="Email" fx:id="colEmail" style="-fx-font-size: 14px;" />
+                    <TableColumn text="Téléphone" fx:id="colTelephone" style="-fx-font-size: 14px;" />
+                </columns>
+            </TableView>
+
+            <!-- Boutons d'action -->
+            <HBox spacing="10" style="-fx-alignment: center; -fx-padding: 10;">
+                <Button text="Ajouter Personnel" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" onAction="#addPersonnel" />
+                <Button text="Modifier" style="-fx-background-color: #f39c12; -fx-text-fill: white;" onAction="#editPersonnel" />
+                <Button text="Supprimer" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" onAction="#deletePersonnel" />
+            </HBox>
+
+        </VBox>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <ToolBar style="-fx-background-color: #bdc3c7;">
+            <Label text="© 2024 Système de Gestion de Salle de Sport. Tous droits réservés." style="-fx-text-fill: #2c3e50;" />
+        </ToolBar>
+    </bottom>
+
+</BorderPane>

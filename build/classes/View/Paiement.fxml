@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600" prefWidth="800" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="Controller.PaiementController">
+
+    <!-- Titre et bouton de retour en haut -->
+    <top>
+        <ToolBar style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Button fx:id="BackButton" onAction="#BackAction" prefHeight="40.0" prefWidth="40.0" text="←"
+                    style="-fx-font-size: 17px; -fx-background-color: transparent; -fx-text-fill: white;" />
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px; -fx-padding: 0 0 0 10;" text="Gestion des Paiements" />
+        </ToolBar>
+    </top>
+
+    <!-- Formulaire pour les paiements -->
+    <center>
+        <VBox spacing="10" style="-fx-padding: 15;">
+            <GridPane hgap="10" vgap="10">
+                <Label text="ID Membre:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                <TextField fx:id="idMembreField" promptText="Entrez l'ID du membre" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                <Label text="Nom:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                <TextField fx:id="nomField" promptText="Entrez le nom du membre" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                <Label text="Montant:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                <TextField fx:id="montantField" promptText="Entrez le montant payé" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                <Label text="Date de Paiement:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                <DatePicker fx:id="datePaiementPicker" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <columnConstraints>
+                    <ColumnConstraints />
+                    <ColumnConstraints />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                    <RowConstraints />
+                </rowConstraints>
+            </GridPane>
+
+            <HBox spacing="10" style="-fx-padding: 10;">
+                <Button fx:id="btnAjouterPaiement" style="-fx-font-size: 14px;" text="Ajouter Paiement" onAction="#ajouterPaiement"  />
+                <Button fx:id="btnRechercherPaiement" style="-fx-font-size: 14px;" text="Rechercher Paiement" onAction="#rechercherPaiement"  />
+                <Button fx:id="btnSupprimerPaiement" style="-fx-font-size: 14px;" text="Supprimer Paiement" onAction="#supprimerPaiement"  />
+            </HBox>
+
+            <!-- Table des paiements -->
+            <TableView fx:id="tablePaiements" prefHeight="300">
+                <columns>
+                    <TableColumn fx:id="colIdPaiement" prefWidth="100" text="ID Paiement" />
+                    <TableColumn fx:id="colIdMembre" prefWidth="100" text="ID Membre" />
+                    <TableColumn fx:id="colNomMembre" prefWidth="150" text="Nom Membre" />
+                    <TableColumn fx:id="colMontant" prefWidth="100" text="Montant" />
+                    <TableColumn fx:id="colDatePaiement" prefWidth="150" text="Date" />
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <ToolBar style="-fx-background-color: #bdc3c7;">
+            <Label style="-fx-text-fill: #2c3e50;" text="© 2024 Système de Gestion de Salle de Sport. Tous droits réservés." />
+        </ToolBar>
+    </bottom>
+</BorderPane>

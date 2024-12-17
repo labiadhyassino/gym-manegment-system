@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:controller="Controller.GestionSalleController" xmlns:fx="http://javafx.com/fxml" prefHeight="600" prefWidth="800">
+
+    <!-- Titre en haut avec bouton de retour -->
+    <top>
+        <ToolBar style="-fx-background-color: #2c3e50; -fx-padding: 10;">
+            <Button fx:id="BackButton" text="←" prefHeight="40.0" prefWidth="40.0"
+                    style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 17px;"
+                    onAction="#BackAction"/>
+            <Label style="-fx-text-fill: white; -fx-font-size: 20px;" text="Gestion des Salles" />
+        </ToolBar>
+    </top>
+
+    <!-- Menu principal sur la gauche -->
+    <left>
+        <VBox spacing="10" style="-fx-background-color: #ecf0f1; -fx-padding: 15;">
+            <Button fx:id="rafraichir" text="Rafraîchir" prefWidth="150" style="-fx-font-size: 14px;" onAction="#rafraichirDonnees"  />
+        </VBox>
+    </left>
+
+    <!-- Zone principale avec tableau -->
+    <center>
+        <VBox spacing="15" style="-fx-padding: 20;">
+            <Label text="Liste des Salles" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+            <TableView fx:id="tableSalles" prefHeight="400" prefWidth="600">
+                <columns>
+                    <TableColumn fx:id="colNomSalle" text="Nom de la Salle" prefWidth="200"/>
+                    <TableColumn fx:id="colCapacite" text="Capacité" prefWidth="100"/>
+                    <TableColumn fx:id="colStatut" text="Statut" prefWidth="100"/>
+                    <TableColumn fx:id="colActivite" text="Activité" prefWidth="200"/>
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <!-- Pied de page -->
+    <bottom>
+        <ToolBar style="-fx-background-color: #bdc3c7;">
+            <Label text="© 2024 Système de Gestion de Salle de Sport. Tous droits réservés." style="-fx-text-fill: #2c3e50;"/>
+        </ToolBar>
+    </bottom>
+</BorderPane>

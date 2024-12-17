@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox  xmlns:fx="http://javafx.com/fxml/1" spacing="10" alignment="CENTER" fx:controller="Controller.EditPersonnelController">
+    <Label text="Modifier le Personnel" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+    
+    <TextField fx:id="nomField" promptText="Nom" />
+    <TextField fx:id="roleField" promptText="Rôle" />
+    <TextField fx:id="emailField" promptText="Email" />
+    <TextField fx:id="telephoneField" promptText="Téléphone" />
+    
+    <HBox spacing="10">
+        <Button text="Confirmer" onAction="#confirmerModification" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" />
+        <Button text="Annuler" onAction="#annulerModification" style="-fx-background-color: #e74c3c; -fx-text-fill: white;" />
+    </HBox>
+</VBox>
